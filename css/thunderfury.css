@@ -12,4 +12,8 @@ body {
   justify-items: center;
 }
 
+#product_container {
+  display: grid;
+}
+
 /*# sourceMappingURL=thunderfury.css.map */

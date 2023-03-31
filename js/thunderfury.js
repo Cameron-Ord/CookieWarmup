@@ -38,13 +38,25 @@ let products = [{
 
 ];   
 
-for(counter = 0; counter < products.length; counter = counter +1){
+let product_container = document.querySelector(`#product_container`);
 
-    document.body.insertAdjacentHTML(`beforeend`, `<h1>${products[counter][`name`]}`);
-    document.body.insertAdjacentHTML(`beforeend`, `<h1>${products[counter][`price`]}`);
-    
-    document.body.insertAdjacentHTML(`beforeend`, `<h1>${products[counter][`description`]}`);
-    document.body.insertAdjacentHTML(`beforeend`, `<img src="${products[counter][`image_url`]}" width="100px" height="150px">`);
+for(counter = 0; counter < products.length; counter = counter +1){
+product_container.insertAdjacentHTML(`beforeend`, 
+`<span class="product">
+<h3>${products[counter][`name`]}</h3>
+<img src="${products[counter][`image_url`]}" width="100px" height="150px">
+<p>${products[counter][`description`]}</p>
+<h6>${products[counter][`price`]}</h6>
+
+<button product_name="Thunderfury">
+
+
+
+
+
+
+`
+);
 
 };
 
