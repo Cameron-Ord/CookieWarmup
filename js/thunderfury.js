@@ -49,13 +49,11 @@ product_container.insertAdjacentHTML(`beforeend`,
 <h6>${products[counter][`price`]}</h6>
 
 <button product_name="Thunderfury">
-
-
-
-
-
-
-`
+product_price="${products[counter][`price`]}"
+product_name="${products[counter][`name`]}"
+ADD
+</button>
+</span>`
 );
 
 };
