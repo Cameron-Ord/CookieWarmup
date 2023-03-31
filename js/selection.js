@@ -17,11 +17,24 @@ if(chosen_pokemon === undefined){
 
 //${parse[`image_url`]} parses the object, then grabs the image_url inside it and displays it on the page//
 
-    document.body.insertAdjacentHTML(`beforeend`, `<img src="${parse[`image_url`]}">`);
+    document.body.insertAdjacentHTML(`beforeend`, `<img src="${parse[`image_url`]}" width="100px" height="150px">`);
 };
 
 
 
 
 
+let get_json2 = Cookies.get(`product_selected`);
+let parse2 = JSON.parse(get_json2);
+let chosen_product = Cookies.get(`product_selected`);
 
+if(chosen_product === undefined){
+
+    document.body.insertAdjacentHTML(`afterbegin`,`<h1>Please select a product/h1>`);
+
+}else{
+
+document.body.insertAdjacentHTML(`beforeend`, `<img src="${parse2[`image_url`]}" width="100px" height="150px">`)
+
+
+}
